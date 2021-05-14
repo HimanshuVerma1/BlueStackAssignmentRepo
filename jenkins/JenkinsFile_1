@@ -2,7 +2,6 @@ pipeline {
 
 	agent any
 	
-	options([
 		parameters([
 			string(
 				defaultValue:'',
@@ -11,7 +10,6 @@ pipeline {
 				description: 'Enter branch name to build the branch'
 			)
 		])
-	])
 	
 	stages {
 		stage ('Check out the specific branch') {
