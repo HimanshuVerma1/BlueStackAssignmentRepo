@@ -16,7 +16,7 @@ pipeline {
 	stages {
 		stage ('Check out the specific branch') {
 			steps{
-				git branch: "%params.Branch%", url: 'https://github.com/HimanshuVerma1/BlueStackAssignmentRepo.git'
+				git branch: "${params.Branch}", url: 'https://github.com/HimanshuVerma1/BlueStackAssignmentRepo.git'
 			}
 		}
 	}
