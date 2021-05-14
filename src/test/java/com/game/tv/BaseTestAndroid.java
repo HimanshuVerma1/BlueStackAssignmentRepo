@@ -31,7 +31,7 @@ public class BaseTestAndroid {
 //		service = AppiumDriverLocalService.buildService(builder);
 //		service.start();
 
-		DesiredCapabilities desireCap = new DesiredCapabilities()
+		DesiredCapabilities desireCap = new DesiredCapabilities();
 		desireCap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "tv.game");
 		desireCap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "tv.game.MainActivity");
 		desireCap.setCapability(AndroidMobileCapabilityType.PLATFORM_NAME, "Android");
