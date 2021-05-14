@@ -2,17 +2,21 @@ pipeline {
 
 	agent any
 	
-	parameters {
-		gitParameter branchFilter: 'origin/(.*)', 
-					 defaultValue: 'RC_Branch',
-					 name: 'BRANCH',
-					 type: 'PT_BRANCH'
-	}
+	properties([
+		parameters([
+			string(
+				defaultValue:'',
+				name: 'Branch',
+				trim: true,
+				description: 'Enter branch name to build the branch'
+			)
+		])
+	])
 	
 	stages {
 		stage ('Check out the specific branch') {
 			steps{
-				git branch: "$(params.BRANCH)", url: 'https://github.com/HimanshuVerma1/BlueStackAssignmentRepo.git'
+				git branch: "${params.Branch}", url: 'https://github.com/HimanshuVerma1/BlueStackAssignmentRepo.git'
 			}
 		}
 	}
