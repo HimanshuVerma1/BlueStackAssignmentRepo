@@ -3,8 +3,7 @@ package com.jenkins.practice;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class JenkinsMavenIntegration {
-
+public class JenkinsMavenIntegration extends BaseTestJenkins {
 
 	@BeforeMethod
 	public void beforeMethod() {
