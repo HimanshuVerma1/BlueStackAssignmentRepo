@@ -14,4 +14,9 @@ public class JenkinsMavenIntegration extends BaseTestJenkins {
 	public void myMethod() {
 		System.out.println("Executing my method");
 	}
+	
+	@Test
+	public void myMethod_1() {
+		System.out.println("Executing my method one");
+	}
 }
